@@ -1,0 +1,56 @@
+<!-- 
+    Archivo: login.html
+    Proyecto: Página Web Veterinaria
+    Autor: Campechano Tavares Leonardo Emmanuel  
+    Fecha de creación: 23/10/24
+    Descripción: Este archivo contiene el formulario de inicio de sesión para la página web de una veterinaria.
+    Última modificación: 23/10/24 
+-->
+
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login web</title>
+    
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="../css/style_login.css">
+
+    <!-- Enlace a la librería de iconos de Font Awesome -->
+    <link rel="stylesheet" href="cl-icon/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Formulario de inicio de sesión --> 
+        <form action="../config/login.php" method="POST" class="form">
+            <!-- Título del formulario -->
+            <h1 class="title">Iniciar Sesión</h1>
+
+            <!-- Campo de entrada para el nombre de usuario -->
+            <div class="inp">
+                <input type="text" name="username" id="username" class="input" placeholder="Usuario">
+                <i class="fa-solid fa-user"></i> <!-- Icono de usuario -->
+            </div>
+
+            <!-- Campo de entrada para la contraseña -->
+            <div class="inp">
+                <input type="password" name="password" id="password" class="input" placeholder="Contraseña">
+                <i class="fa-solid fa-lock"></i> <!-- Icono de candado -->
+            </div>
+
+            <!-- Botón de envío del formulario -->
+            <button class="submit">Iniciar Sesión</button>
+
+            <!-- Enlace para registrarse si no se tiene cuenta -->
+            <p class="footer">¿No tienes cuenta? <a href="#" class="link">Por favor, regístrate</a></p>
+        </form>
+
+        <!-- Sección de bienvenida con banner -->
+        <div class="banner">
+            <!--<h1 class="well_text">Bienvenido<br/></h1>-->
+            <div class=logoDos><img src="../image/mascota.png" alt="Logo Veterinaria"></p>
+        </div>
+    </div>
+</body>
+</html>

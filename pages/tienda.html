@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+    <h1>Tienda de Productos</h1>
+    <div class="product-cards">
+
+        
+        <?php
+        // Conexión a la base de datos
+        $conn = new mysqli("localhost", "tu_usuario", "tu_contraseña", "nombre_base_de_datos");
+
+        if ($conn->connect_error) {
+            die("Conexión fallida: " . $conn->connect_error);
+        }
+
+        // Obtener los productos
+        $sql = "SELECT * FROM productos";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="card">';
+                echo '<img src="' . $row["imagen_url"] . '" alt="' . $row["nombre"] . '">';
+                echo '<h3>' . $row["nombre"] . '</h3>';
+                echo '<p>' . $row["descripcion"] . '</p>';
+                echo '<p>Precio: $' . $row["precio"] . '</p>';
+                echo '</div>';
+            }
+        } else {
+            echo "No hay productos disponibles.";
+        }
+
+        $conn->close();
+        ?>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box; /* Asegura que el padding y border no afecten al tamaño total */
+}
+body {
+    background-color: #222;
+}
+.form-container {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 50%; /* Asegura que el formulario se ajuste al contenedor */
+    width: 50%; /* Hace que ocupe todo el espacio disponible */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    margin:0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #00e6ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacio debajo de cada grupo de elementos */
+}
+
+label {
+    display: block;
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+
+.dark {
+    width: 100%; /* Los campos ocuparán el 100% de su contenedor */
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+}
+
+
+.dark:focus {
+    border-color: #00c6ff;
+    outline: none;
+    background-color: #444;
+}
+
+button {
+    width: 100%; /* Asegura que el botón ocupe el 100% del contenedor */
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
