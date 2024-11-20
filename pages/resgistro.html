@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <div class="container">
+        <form action="../config/registro.php" method="POST">
+            <h2>Registro</h2>
+            <div class="input-group">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
+            </div>
+            <div class="input-group">
+                <label>Selecciona tu Rol</label>
+                <div class="roles">
+                    <label>
+                        <input type="radio" name="role" value="cliente" required> Cliente
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="admin" required> Administrador
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+

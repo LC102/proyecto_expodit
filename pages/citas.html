@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Cita</title>
-    <link rel="stylesheet" href="../css/style_cita.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agendar Cita</title>
+        <link rel="stylesheet" href="../css/style_cita.css">
+    </head>
+    
 </head>
 <body>
-    <div class="form-container">
-        <h2>Agendar Cita</h2>
-        <form action="agendar_cita.php" method="post">
-            <label for="nombre_cliente">Nombre:</label>
-            <input type="text" id="nombre_cliente" name="nombre_cliente" class="dark" require>
+    <h2>Agendar Cita</h2>
+    <form action="../config/agendar_cita.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="dark" ><br><br>
 
-            <label for="telefono_cliente">Teléfono:</label>
-            <input type="text" id="telefono_cliente" name="telefono_cliente"  class="dark" equired>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" class="dark" ><br><br>
 
-            <label for="correo_cliente">Correo Electrónico:</label>
-            <input type="email" id="correo_cliente" name="correo_cliente" class="dark" required>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" class="dark" ><br><br>
 
-            <label for="fecha">Fecha de la Cita:</label>
-            <input type="date" id="fecha" name="fecha" class="dark" required>
+        <label for="fecha">Fecha de la Cita:</label>
+        <input type="date" id="fecha" name="fecha" class="dark" ><br><br>
 
-            <label for="hora">Hora de la Cita:</label>
-            <input type="time" id="hora" name="hora" class="dark" required>
+        <label for="hora">Hora de la Cita:</label>
+        <input type="time" id="hora" name="hora" class="dark" ><br><br>
 
-            <label for="motivo">Motivo de la Cita:</label>
-            <input type="text" id="motivo" name="motivo" rows="4" class="dark" required>
+        <label for="motivo">Motivo de la Cita:</label>
+        <textarea id="motivo" name="motivo" class="dark" ></textarea><br><br>
 
-            <button type="submit">Agendar Cita</button>
-        </form>
-    </div>
+        <button type="submit">Agendar Cita</button>
+    </form>
 </body>
 </html>
+
+<script>
+/*     function validations(){
+        
+    name = document.getElementById('nombre').value;
+
+    if(!name){
+        const errors = document.getElementById('errors');
+        errors.textContent = 'Required....';
+        
+
+    }
+
+}
+*/</script>

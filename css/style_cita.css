@@ -1,49 +1,64 @@
 * {
-    box-sizing: border-box; /* Asegura que el padding y border no afecten al tamaño total */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
-    background-color: #222;
-}
-.form-container {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 50%; /* Asegura que el formulario se ajuste al contenedor */
-    width: 50%; /* Hace que ocupe todo el espacio disponible */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    margin:0 auto;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
-h2 {
-    text-align: center;
+.form-container {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 200px; /* Ancho máximo para hacerlo compacto */
+    width: 100%; /* Ocupa el 100% del contenedor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h2 { /*Titulo de Agendar Citas*/
+    text-align: left;
     color: #00e6ff;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    font-weight: bold;
 }
 
 .form-group {
-    margin-bottom: 15px; /* Espacio debajo de cada grupo de elementos */
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
     color: #bbbbbb;
     font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
-
-.dark {
-    width: 100%; /* Los campos ocuparán el 100% de su contenedor */
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: 6px;
+.dark {   /*Clase para las entradas de texto*/
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #444;
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
-    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
-
 
 .dark:focus {
     border-color: #00c6ff;
@@ -51,22 +66,38 @@ label {
     background-color: #444;
 }
 
-button {
-    width: 100%; /* Asegura que el botón ocupe el 100% del contenedor */
+button { /*Boton para agendar la cita*/
+    width: 100%;
     padding: 12px;
     margin-top: 20px;
     background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: #fff;
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     transition: background 0.3s ease;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 198, 255, 0.4);
 }
 
 button:hover {
     background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Margen entre campos más pequeño para mayor compactación */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group textarea {
+    margin-top: 8px;
+}
+
 
